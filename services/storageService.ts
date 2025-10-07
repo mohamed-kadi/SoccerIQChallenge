@@ -1,11 +1,11 @@
 import { ScoreEntry, GameStats, Difficulty, Achievement } from '../types';
 import { ACHIEVEMENTS } from '../constants';
 
-const HIGH_SCORES_KEY_PREFIX = 'soccerTriviaHighScores_';
-const STATS_KEY = 'soccerTriviaStats';
-const THEME_KEY = 'soccerTriviaTheme';
-const SOUND_KEY = 'soccerTriviaSoundMuted';
-const ACHIEVEMENTS_KEY = 'soccerTriviaAchievements';
+const HIGH_SCORES_KEY_PREFIX = 'sportsTriviaHighScores_';
+const STATS_KEY = 'sportsTriviaStats';
+const THEME_KEY = 'sportsTriviaTheme';
+const SOUND_KEY = 'sportsTriviaSoundMuted';
+const ACHIEVEMENTS_KEY = 'sportsTriviaAchievements';
 
 // High Scores
 const getHighScoresKey = (difficulty: Difficulty) => `${HIGH_SCORES_KEY_PREFIX}${difficulty}`;

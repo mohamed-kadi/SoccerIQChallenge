@@ -7,7 +7,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     id: 'first_game',
     title: 'Newcomer',
-    description: 'Play your first game of Soccer IQ Challenge.',
+    description: 'Play your first game of Sports IQ Challenge.',
     icon: '👋',
     isUnlocked: (stats) => stats.gamesPlayed >= 1,
   },

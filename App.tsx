@@ -228,7 +228,7 @@ const App: React.FC = () => {
       </div>
       <div className="w-full max-w-2xl mx-auto text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-yellow-500 dark:text-yellow-400 mb-4 font-mono">
-          Soccer IQ Challenge
+          Sports IQ Challenge
         </h1>
         {renderContent()}
       </div>
