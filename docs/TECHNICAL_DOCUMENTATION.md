@@ -5,7 +5,7 @@
 - **Entry Point:** `index.tsx` renders `<App />` into the `#root` element defined in `index.html`.
 - **State Management:** Local component state via React hooks (`useState`, `useEffect`).
 - **Persistence Layer:** Browser `localStorage` accessed through helper functions in `services/storageService.ts`.
-- **Data Source:** Open Trivia Database REST API (sports category) consumed by `services/geminiService.ts`.
+- **Data Source:** Open Trivia Database REST API (sports category) consumed by `services/triviaService.ts`.
 - **Styling:** Tailwind CSS CDN with class-based dark mode (`dark` class on `html`).
 - **Audio:** Web Audio API abstractions in `services/soundService.ts`.
 
@@ -38,8 +38,8 @@
 - `HighScoresScreen` & `StatsScreen`: Read-only views backed by `storageService`.
 
 ### 3.2 Services
-- `services/geminiService.ts`:
-  - Despite legacy naming, it targets Open Trivia DB (category 21).
+- `services/triviaService.ts`:
+  - Interfaces with the Open Trivia DB sports category (ID 21).
   - Encodes difficulty, decodes Base64 payloads, shuffles answers.
   - Centralized error handling with user-friendly messages.
 - `services/storageService.ts`:
@@ -62,7 +62,7 @@
 
 ## 6. Audio System
 - Audio context is lazily created to comply with browser interaction policies.
-- Sound assets (`correct`, `incorrect`) are embedded as base64 WAVs; `click` is generated procedurally.
+- Feedback tones (`correct`, `incorrect`, `click`) are synthesized on the fly with soft attack/release envelopes for smoother playback.
 - Mute state is persisted; unmuting triggers `initAudioOnInteraction` to ensure context readiness.
 - Defensive coding guards against unsupported browsers and suspended contexts.
 

@@ -7,7 +7,7 @@ import { ThemeToggler } from './components/ThemeToggler';
 import { SoundToggler } from './components/SoundToggler';
 import { HighScoresScreen } from './components/HighScoresScreen';
 import { StatsScreen } from './components/StatsScreen';
-import { fetchTriviaQuestions } from './services/geminiService';
+import { fetchTriviaQuestions } from './services/triviaService';
 import { getTheme, setTheme as saveTheme, saveStats, getStats, getAchievements, saveAchievements } from './services/storageService';
 import { QuestionState, Difficulty, Achievement } from './types';
 import { TOTAL_QUESTIONS, ACHIEVEMENTS, TIMER_DURATION } from './constants';
@@ -221,7 +221,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col items-center justify-center p-4 transition-colors duration-500">
+    <div className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col items-center justify-center p-4 transition-colors duration-150">
       <div className="absolute top-4 right-4 flex space-x-2">
         <SoundToggler muted={soundMuted} onToggle={handleToggleMute} />
         <ThemeToggler theme={theme} onToggle={toggleTheme} />
